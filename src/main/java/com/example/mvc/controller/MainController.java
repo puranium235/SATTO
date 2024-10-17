@@ -12,6 +12,8 @@ import com.ssafy.mvc.dto.Message;
 import com.ssafy.mvc.dto.Satto;
 import com.ssafy.util.Util;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class MainController {
 	Util util = Util.getInstance();
@@ -24,7 +26,7 @@ public class MainController {
 	}
 
 	@PostMapping("/ssato")
-	String satto(@RequestParam String type, @RequestParam List<Integer> num, Model model) {
+	String satto(@RequestParam String type, @RequestParam List<Integer> num, HttpSession session, Model model) {
 		Satto userSatto;
 
 		Message msg = util.validCheck(type, num);
@@ -43,10 +45,19 @@ public class MainController {
 
 		int match = userSatto.compare(serverSatto);
 
-		model.addAttribute("userSatto", userSatto);
-		model.addAttribute("serverSatto", serverSatto);
-		model.addAttribute("match", match);
+		session.setAttribute("userSatto", userSatto);
+		session.setAttribute("serverSatto", serverSatto);
+		session.setAttribute("match", match);
 
+		return "redirect:result";
+	}
+
+	@GetMapping("result")
+	public String result(HttpSession session, Model model) {
+		model.addAttribute("userSatto", session.getAttribute("userSatto"));
+		model.addAttribute("serverSatto", session.getAttribute("serverSatto"));
+		model.addAttribute("match", session.getAttribute("match"));
 		return "result";
 	}
+
 }
