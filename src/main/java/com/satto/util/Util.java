@@ -1,8 +1,8 @@
-package com.ssafy.util;
+package com.satto.util;
 
 import java.util.List;
 
-import com.ssafy.mvc.dto.Message;
+import com.satto.mvc.dto.Message;
 
 public class Util {
 	private static Util instance = new Util();

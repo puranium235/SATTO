@@ -1,4 +1,4 @@
-package com.ssafy.mvc.dto;
+package com.satto.mvc.dto;
 
 public class Message {
 	String status, body;

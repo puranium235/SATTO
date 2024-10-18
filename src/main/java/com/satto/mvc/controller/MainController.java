@@ -1,4 +1,4 @@
-package com.example.mvc.controller;
+package com.satto.mvc.controller;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ssafy.mvc.dto.Message;
-import com.ssafy.mvc.dto.Satto;
-import com.ssafy.util.Util;
+import com.satto.mvc.dto.Message;
+import com.satto.mvc.dto.Satto;
+import com.satto.util.Util;
 
 import jakarta.servlet.http.HttpSession;
 

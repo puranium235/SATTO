@@ -1,4 +1,4 @@
-package com.ssafy.mvc.dto;
+package com.satto.mvc.dto;
 
 import java.util.ArrayList;
 import java.util.Collection;
