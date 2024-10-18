@@ -25,7 +25,7 @@
 	
 	<div id="${msg.status}">${msg.body}</div>
 	<div id="submit">
-	<input type="submit" value="응모하기">
+	<input type="submit" value="응모하기" id="submitButton">
 	</div>
 	</form>
 
