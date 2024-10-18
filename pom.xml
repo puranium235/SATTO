@@ -63,11 +63,6 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-        <dependency>
-        	<groupId>com.ssafy</groupId>
-        	<artifactId>spring_ws_09_A</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
-        </dependency>
 	</dependencies>
 
 	<build>
